@@ -1,37 +1,43 @@
 {
   "homepage":"https://saiteja623.github.io",
-  "name": "awesome",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/material": "^5.15.11",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
-    "emoji-picker-react": "^3.2.3",
-    "jsmediatags": "^3.9.3",
-    "react": "^16.13.1",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-copy-to-clipboard": "^5.0.2",
-    "react-dom": "^16.13.1",
-    "react-flip-move": "^3.0.4",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "react-swipeable-views": "^0.13.9",
-    "socket.io-client": "^2.3.0"
+    "emoji-picker-react": "^4.8.0",
+    "jsmediatags": "^3.9.7",
+    "react": "^18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "react-flip-move": "^3.0.5",
+    "react-router-dom": "^6.22.2",
+    "react-scripts": "5.0.1",
+    "socket.io-client": "^4.7.4",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "gh-pages-clean"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [

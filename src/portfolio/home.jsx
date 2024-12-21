@@ -217,7 +217,7 @@ class Home extends Component {
                       <div className={dark ? "s1 dark" : "s1"}>S</div>
                     </div>
                   </Grid>
-                  <Grid item xs={6} sm={6}></Grid>
+                  <Grid item xs={5} sm={5}></Grid>
                   <Grid
                     item
                     container
@@ -246,24 +246,36 @@ class Home extends Component {
                             onClick={() => {
                               e === "Home"
                                 ? this.Home.current.scrollIntoView({
-                                    behavior: "smooth",
-                                  })
+                                  behavior: "smooth",
+                                })
                                 : e === "About"
-                                ? this.About.current.scrollIntoView({
+                                  ? this.About.current.scrollIntoView({
                                     behavior: "smooth",
                                   })
-                                : e === "Skills"
-                                ? this.Skills.current.scrollIntoView({
-                                    behavior: "smooth",
-                                  })
-                                : e === "Projects"
-                                ? this.Projects.current.scrollIntoView({
-                                    behavior: "smooth",
-                                  })
-                                : this.Contact.current.scrollIntoView({
-                                    behavior: "smooth",
-                                  });
+                                  : e === "Skills"
+                                    ? this.Skills.current.scrollIntoView({
+                                      behavior: "smooth",
+                                    })
+                                    : e === "Projects"
+                                      ? this.Projects.current.scrollIntoView({
+                                        behavior: "smooth",
+                                      })
+                                      : this.Contact.current.scrollIntoView({
+                                        behavior: "smooth",
+                                      });
                             }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.querySelector("p").style.color = "black"; // Change text color on hover
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.querySelector("p").style.color = ""; // Reset text color
+                            }}
+                          // onMouseEnter={(e) => {
+                          //  e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+                          //  }}
+                          // onMouseLeave={(e) => {
+                          //    e.currentTarget.style.backgroundColor = "transparent";
+                          // }}
                           >
                             <Typography variant="body1">{e}</Typography>
                           </Grid>
@@ -310,16 +322,40 @@ class Home extends Component {
                 I'm a self taught full stack developer.
               </Typography>
               <br />
-              <Button
-                variant="outlined"
-                size="large"
-                onClick={() => {
-                  window.open("mailto:saiteja.balla13@gmail.com");
-                }}
-                style={dark ? { color: "#64ffda" } : { color: "blue" }}
-              >
-                Get In Touch
-              </Button>
+              <div>
+                <Grid
+                  container
+                  spacing={2} // Space between buttons
+                >
+                  {/* Get In Touch Button */}
+                  <Grid item>
+                    <Button
+                      variant="outlined"
+                      size="large"
+                      onClick={() => {
+                        window.open("mailto:venkysunkari549@gmail.com");
+                      }}
+                      style={dark ? { color: "#64ffda" } : { color: "blue" }}
+                    >
+                      Get In Touch
+                    </Button>
+                  </Grid>
+
+                  {/* Resume Button */}
+                  <Grid item>
+                    <Button
+                      variant="outlined"
+                      size="large"
+                      onClick={() => {
+                        window.open("https://drive.google.com/file/d/1nY6H7EqOCvjA-sgoWcaNEwsS0YNxGeTo/view");
+                      }}
+                      style={dark ? { color: "#64ffda" } : { color: "blue" }}
+                    >
+                      Resume
+                    </Button>
+                  </Grid>
+                </Grid>
+              </div>
             </div>
             <div
               className="about-me"
@@ -351,7 +387,7 @@ class Home extends Component {
                 <Grid item xs={12} sm={5}>
                   <Hidden xsDown>
                     <Avatar
-                      src={require("./profile.png")}
+                      src={require("./profile.jpg")}
                       style={{
                         width: "150px",
                         height: "150px",
@@ -361,7 +397,7 @@ class Home extends Component {
                   </Hidden>
                   <Hidden smUp>
                     <Avatar
-                      src={require("./profile.png")}
+                      src={require("./profile.jpg")}
                       style={{
                         width: "100px",
                         height: "100px",
@@ -377,18 +413,24 @@ class Home extends Component {
                     component="p"
                     style={{ marginTop: "40px" }}
                   >
-                    Hello I'm a self taught    {" "}
-                   <span
+                    Hi, I'm 
+                    Saiteja Balla.
+                    I'm a passionate and driven software engineer with 2+ years of experience in building robust and scalable applications. I possess a strong foundation in frontend technologies such as <span
                       style={
                         dark ? { color: "#64ffda" } : { fontWeight: "bold" }
                       }
-                    >
-                      MERN 
-                    </span>  stack developer
-                    . I enjoy creating dynamic websites that go live on
-                    internet.I prefer building products that are fast,Productive
-                    and with excellent performance. Beside JS, react I aslo do
-                    coding in C,C++,Java,Python.
+                    >Angular and React</span>, and backend technologies including 
+                    <span
+                    style={
+                      dark ? { color: "#64ffda" } : { fontWeight: "bold" }
+                    }
+                  > Java, Spring Boot </span>, Microservices, Kafka, GCP, and AWS.
+                    I am constantly learning and expanding my skillset, driven by a desire to contribute to cutting-edge projects.
+                    My problem-solving abilities are a key strength, as demonstrated by my <span
+                      style={
+                        dark ? { color: "#64ffda" } : { fontWeight: "bold" }
+                      }
+                    >"Knight" (max 2122) </span> rating on LeetCode. I am eager to contribute my skills and enthusiasm to a challenging and rewarding role within a dynamic team.
                   </Typography>
                 </Grid>
               </Grid>
@@ -440,7 +482,7 @@ class Home extends Component {
                           Other technologies I have worked upon
                         </Typography>
                         <List>
-                          {["C", "C++", "Python", "Java"].map((e) => (
+                          {["C/C++", "Java, Python", "HTML, CSS, TypeScript", "MySQL, MongoDB", "AWS, GCP , GIT"].map((e) => (
                             <ListItem>
                               <ListItemText>{e}</ListItemText>
                             </ListItem>
@@ -463,7 +505,7 @@ class Home extends Component {
                   >
                     <Grid item container justify="center" alignItems="center">
                       <Grid item xs={3}>
-                        <Typography variant="body1">HTML</Typography>
+                        <Typography variant="body1">React</Typography>
                       </Grid>
                       <Grid item xs className={dark ? "bar dark" : "bar"}>
                         <div className={this.state.htmlclass}></div>
@@ -471,7 +513,7 @@ class Home extends Component {
                     </Grid>
                     <Grid item container justify="center" alignItems="center">
                       <Grid item xs={3}>
-                        <Typography variant="body1">CSS</Typography>
+                        <Typography variant="body1">Angular</Typography>
                       </Grid>
                       <Grid item xs className={dark ? "bar dark" : "bar"}>
                         <div className={this.state.cssclass}></div>
@@ -480,7 +522,7 @@ class Home extends Component {
                     <Grid item container justify="center" alignItems="center">
                       <Grid item xs={3}>
                         <Typography variant="body1" color="default">
-                          JS
+                          JavaScript
                         </Typography>
                       </Grid>
                       <Grid item xs className={dark ? "bar dark" : "bar"}>
@@ -489,7 +531,7 @@ class Home extends Component {
                     </Grid>
                     <Grid item container justify="center" alignItems="center">
                       <Grid item xs={3}>
-                        <Typography variant="body1">React</Typography>
+                        <Typography variant="body1">Spring Boot</Typography>
                       </Grid>
                       <Grid item xs className={dark ? "bar dark" : "bar"}>
                         <div className={this.state.reactclass}></div>
@@ -497,7 +539,7 @@ class Home extends Component {
                     </Grid>
                     <Grid item container justify="center" alignItems="center">
                       <Grid item xs={3}>
-                        <Typography variant="body1">Django</Typography>
+                        <Typography variant="body1">NodeJS</Typography>
                       </Grid>
                       <Grid item xs className={dark ? "bar dark" : "bar"}>
                         <div className={this.state.djangoclass}></div>
@@ -505,7 +547,7 @@ class Home extends Component {
                     </Grid>
                     <Grid item container justify="center" alignItems="center">
                       <Grid item xs={3}>
-                        <Typography variant="body1">Mysql</Typography>
+                        <Typography variant="body1">MySQL</Typography>
                       </Grid>
                       <Grid item xs className={dark ? "bar dark" : "bar"}>
                         <div className={this.state.mysqlclass}></div>
@@ -1057,9 +1099,9 @@ class Home extends Component {
                               dark
                                 ? { color: "#31ef88", margin: "30px auto" }
                                 : {
-                                    color: "rgb(211, 13, 13)",
-                                    margin: "30px auto",
-                                  }
+                                  color: "rgb(211, 13, 13)",
+                                  margin: "30px auto",
+                                }
                             }
                           />
                         </Grid>
@@ -1094,9 +1136,9 @@ class Home extends Component {
                               dark
                                 ? { color: "#31ef88", margin: "30px auto" }
                                 : {
-                                    color: "rgb(211, 13, 13)",
-                                    margin: "30px auto",
-                                  }
+                                  color: "rgb(211, 13, 13)",
+                                  margin: "30px auto",
+                                }
                             }
                           />
                         </Grid>
@@ -1134,9 +1176,9 @@ class Home extends Component {
                                 dark
                                   ? { color: "#31ef88", margin: "30px auto" }
                                   : {
-                                      color: "rgb(211, 13, 13)",
-                                      margin: "30px auto",
-                                    }
+                                    color: "rgb(211, 13, 13)",
+                                    margin: "30px auto",
+                                  }
                               }
                             />
                           </Grid>
@@ -1342,23 +1384,23 @@ class Home extends Component {
                     onClick={() => {
                       e === "Home"
                         ? this.Home.current.scrollIntoView({
-                            behavior: "smooth",
-                          })
+                          behavior: "smooth",
+                        })
                         : e === "About"
-                        ? this.About.current.scrollIntoView({
+                          ? this.About.current.scrollIntoView({
                             behavior: "smooth",
                           })
-                        : e === "Skills"
-                        ? this.Skills.current.scrollIntoView({
-                            behavior: "smooth",
-                          })
-                        : e === "Projects"
-                        ? this.Projects.current.scrollIntoView({
-                            behavior: "smooth",
-                          })
-                        : this.Contact.current.scrollIntoView({
-                            behavior: "smooth",
-                          });
+                          : e === "Skills"
+                            ? this.Skills.current.scrollIntoView({
+                              behavior: "smooth",
+                            })
+                            : e === "Projects"
+                              ? this.Projects.current.scrollIntoView({
+                                behavior: "smooth",
+                              })
+                              : this.Contact.current.scrollIntoView({
+                                behavior: "smooth",
+                              });
                       this.handleHamburger();
                     }}
                   >
