@@ -1,32 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.32cb4d01.chunk.css",
-    "main.js": "/static/js/main.bef55550.chunk.js",
-    "main.js.map": "/static/js/main.bef55550.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4246d486.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4246d486.js.map",
-    "static/css/2.4707e12a.chunk.css": "/static/css/2.4707e12a.chunk.css",
-    "static/js/2.6dbdcc9e.chunk.js": "/static/js/2.6dbdcc9e.chunk.js",
-    "static/js/2.6dbdcc9e.chunk.js.map": "/static/js/2.6dbdcc9e.chunk.js.map",
+    "main.css": "/static/css/main.32ac9e3b.css",
+    "main.js": "/static/js/main.73e969ed.js",
+    "static/media/profile.jpg": "/static/media/profile.f04076199a653b4b1625.jpg",
+    "static/media/news.png": "/static/media/news.2fac13455c764562f9d6.png",
+    "static/media/music.png": "/static/media/music.592ea06994ed2a13a352.png",
+    "static/media/instagram.jpeg": "/static/media/instagram.edccee6dcff9e051c297.jpeg",
+    "static/media/games2.jpeg": "/static/media/games2.10f0e67a1b0ab00bc6f0.jpeg",
+    "static/media/chatapp.jpeg": "/static/media/chatapp.6867f074fbc119e6fa2d.jpeg",
+    "static/media/ecom.jpeg": "/static/media/ecom.6c88ff134ffa9d7909c9.jpeg",
     "index.html": "/index.html",
-    "precache-manifest.a14abde3d5d6f2d9f15c27a3ddd2c5cc.js": "/precache-manifest.a14abde3d5d6f2d9f15c27a3ddd2c5cc.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.4707e12a.chunk.css.map": "/static/css/2.4707e12a.chunk.css.map",
-    "static/css/main.32cb4d01.chunk.css.map": "/static/css/main.32cb4d01.chunk.css.map",
-    "static/js/2.6dbdcc9e.chunk.js.LICENSE.txt": "/static/js/2.6dbdcc9e.chunk.js.LICENSE.txt",
-    "static/media/chatapp.jpeg": "/static/media/chatapp.47e22166.jpeg",
-    "static/media/ecom.jpeg": "/static/media/ecom.4a49ab41.jpeg",
-    "static/media/games2.jpeg": "/static/media/games2.a9ccfee1.jpeg",
-    "static/media/instagram.jpeg": "/static/media/instagram.a78dc4a6.jpeg",
-    "static/media/music.png": "/static/media/music.24dbd379.png",
-    "static/media/news.png": "/static/media/news.f1f268d2.png",
-    "static/media/profile.png": "/static/media/profile.a93b480d.png"
+    "main.32ac9e3b.css.map": "/static/css/main.32ac9e3b.css.map",
+    "main.73e969ed.js.map": "/static/js/main.73e969ed.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.4246d486.js",
-    "static/css/2.4707e12a.chunk.css",
-    "static/js/2.6dbdcc9e.chunk.js",
-    "static/css/main.32cb4d01.chunk.css",
-    "static/js/main.bef55550.chunk.js"
+    "static/css/main.32ac9e3b.css",
+    "static/js/main.73e969ed.js"
   ]
 }
