@@ -336,6 +336,7 @@ body {
 .about-me {
   width: 800px;
   margin: 160px auto;
+  margin-bottom:0px;
   justify-items: center;
   align-items: center;
   height: auto;
@@ -460,6 +461,10 @@ body {
 .other-note-worthy {
   padding: 6px 10px;
   margin: 20px auto;
+}
+.experience.summary{
+  line-height: 30px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* media queries */

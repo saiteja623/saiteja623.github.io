@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import {
+  CardActions,
+  Box,
+} from "@material-ui/core";
+import WorkIcon from "@material-ui/icons/Work"; // To use a work icon
+import {
   ThemeProvider,
   createMuiTheme,
   Paper,
@@ -27,7 +32,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { green } from "@material-ui/core/colors";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
-import Brightness7Icon from "@material-ui/icons/Brightness7";
+//import Brightness7Icon from "@material-ui/icons/Brightness7";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -413,18 +418,18 @@ class Home extends Component {
                     component="p"
                     style={{ marginTop: "40px" }}
                   >
-                    Hi, I'm 
+                    Hi, I'm
                     Saiteja Balla.
                     I'm a passionate and driven software engineer with 2+ years of experience in building robust and scalable applications. I possess a strong foundation in frontend technologies such as <span
                       style={
                         dark ? { color: "#64ffda" } : { fontWeight: "bold" }
                       }
-                    >Angular and React</span>, and backend technologies including 
+                    >Angular and React</span>, and backend technologies including
                     <span
-                    style={
-                      dark ? { color: "#64ffda" } : { fontWeight: "bold" }
-                    }
-                  > Java, Spring Boot </span>, Microservices, Kafka, GCP, and AWS.
+                      style={
+                        dark ? { color: "#64ffda" } : { fontWeight: "bold" }
+                      }
+                    > Java, Spring Boot </span>, Microservices, Kafka, GCP, and AWS.
                     I am constantly learning and expanding my skillset, driven by a desire to contribute to cutting-edge projects.
                     My problem-solving abilities are a key strength, as demonstrated by my <span
                       style={
@@ -434,6 +439,84 @@ class Home extends Component {
                   </Typography>
                 </Grid>
               </Grid>
+            </div>
+            <div
+              className="skills"
+              data-aos="fade"
+              data-aos-duration="500"
+              ref={this.Skills}
+            >
+              <Grid container>
+                <Grid item xs={4} sm={3}>
+                  <Typography
+                    variant="h4"
+                    style={
+                      dark
+                        ? { color: "white", fontWeight: "bold" }
+                        : { color: "black", fontWeight: "bold" }
+                    }
+                  >
+                    Experience
+                  </Typography>
+                </Grid>
+                <Grid item container xs justify="center" alignItems="center">
+                  <Grid item xs={12}>
+                    <Divider />
+                  </Grid>
+                </Grid>
+              </Grid>
+              <div
+                style={{
+                  transition: "all 0.4s ease",
+                  height: "auto",
+                  width: "auto",
+                }}
+              >
+                <Grid container spacing={4} style={{ marginTop: "10px" }}>
+                  {/* Experience Section on the Left */}
+                  <Grid item xs={30} md={20}>
+                    <br />
+                    <Card
+                      elevation={3}
+
+                    >
+                      <CardContent>
+                        <Box display="flex" justifyContent="space-between" alignItems="center">
+                          <Typography variant="h6" style={{ fontWeight: "bold", fontFamily: "Roboto, Helvetica, Arial, sans-serif" }}>
+                            Software Engineer, Infosys
+                          </Typography>
+                          <Typography variant="body2" color="textSecondary">
+                            <i>August 2022 - Present </i>
+                          </Typography>
+                        </Box>
+
+                        <Divider style={{ margin: "10px 0" }} />
+
+                        <Typography variant="body1" component="p" style={{ marginTop: "5px", fontFamily:"'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", lineHeight: "30px" }} >
+                          <ul>
+                            <li>Developed RESTful APIs using Java & Spring Boot for a new product for a major telecommunications client.</li>
+                            <li>Coordinated with 2 dependent teams to gather and relay essential information, ensuring seamless collaboration and
+                              preventing any potential bottlenecks</li>
+                            <li> Developed and deployed a robust API platform using ApigeeX (Google API Gateway) to act as a reverse proxy,
+                              routing traffic from 30+ APIs to 10+ backend systems. Leveraged advanced features like policy-based routing,
+                              rate limiting, and security measures to ensure optimal performance, scalability, and security.
+                            </li>
+                            <li>Designed Circuit Breaker and Retry patterns to significantly improve system resilience and availability,
+                              preventing cascading failures and minimizing downtime.</li>
+                            <li>Implemented distributed tracing in production to monitor and troubleshoot complex microservice applications,
+                              improving system visibility and reliability.</li>
+                          </ul>
+                        </Typography>
+                      </CardContent>
+                      <CardActions>
+                        <WorkIcon color="primary" style={{width:"0.8em",height:"0.8em"}} />
+                        <Typography variant="caption"  style={{fontSize:"0.9rem"}}>Industry: Software</Typography>
+                      </CardActions>
+                    </Card>
+                    <br />
+                  </Grid>
+                </Grid>
+              </div>
             </div>
             <div
               className="skills"
